@@ -8,6 +8,7 @@ import {
 import "./index.css";
 import Home from "./pages/Home";
 import Result from "./pages/Result";
+import Login from "./pages/Login";
 
 function App() {
 
@@ -29,6 +30,13 @@ function App() {
       path: "/result", 
       element: <Result response={response}/> 
     },
+    { 
+
+      name: "Login", 
+      path: "/login", 
+      element: <Login /> 
+    },
+
 
   ]);
 
