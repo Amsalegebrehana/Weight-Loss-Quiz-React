@@ -1,0 +1,412 @@
+
+ [
+      {
+        "id": 1,
+        "question": "Do you have an understanding of your daily caloric needs to support your weight goals?",
+        "noScore": 1,
+        "suggestion": "Consider consulting with a nutritionist or using online tools to calculate your daily caloric needs based on your goals. Educate yourself on the factors influencing caloric requirements, such as activity level and metabolism."
+      },
+      {
+        "id": 2,
+        "question": "Are you familiar with the calorie content of the foods you regularly include in your diet?",
+        "noScore": 1,
+        "suggestion": "Consider consulting with a nutritionist or using online tools to calculate your daily caloric needs based on your goals. Educate yourself on the factors influencing caloric requirements, such as activity level and metabolism. Start by researching and familiarising yourself with the calorie content of common foods. Utilise mobile apps or online databases that provide nutritional information. Gradually, this awareness will become second nature."
+      },
+      {
+        "id": 3,
+        "question": "Can you identify what constitutes a healthy portion size when preparing or consuming meals?",
+        "noScore": 1,
+        "suggestion": "Portion Size Recognition:\nUse visual aids like the palm of your hand or common objects to estimate portion sizes. Practice using measuring cups and scales until you develop a better sense of appropriate servings. Consider taking smaller portions initially and assessing hunger cues before going for seconds."
+      },
+      {
+        "id": 4,
+        "question": "Have you made an effort to log and monitor everything you consume, including food and beverages, throughout a day?",
+        "noScore": 1,
+        "suggestion": "Dietary Tracking Attempt\nStart a food journal or use a nutrition tracking app to log your daily intake. Set achievable goals for consistency, such as tracking for a few days a week initially. Reviewing your journal can help identify patterns and areas for improvement."
+      },
+      {
+        "id": 5,
+        "question": "Are you conscious of any patterns of unhealthy eating habits that might be affecting your weight?",
+        "noScore": 1,
+        "suggestion": "Recognition of Unhealthy Eating Habits\nKeep a reflective journal to document your eating habits and feelings associated with them. Consider seeking support from a nutritionist or counsellor to identify triggers and develop healthier alternatives. Gradual changes, like swapping one unhealthy habit for a healthier choice, can be a good starting point."
+      },
+      {
+        "id": 6,
+        "question": "Do you possess the knowledge to accurately determine the calorie content of the foods you typically consume?",
+        "noScore": 1,
+        "suggestion": "Caloric Content Comprehension\nEducate yourself on how to read nutritional labels and understand portion sizes. Practice estimating calorie content and gradually build your knowledge. Consider using apps that provide information on the nutritional value of foods."
+      },
+      {
+        "id": 7,
+        "question": "Are you actively engaged in mindful eating, paying attention to the nutritional value and portion sizes of your meals?",
+        "noScore": 1,
+        "suggestion": "Mindful Eating Practices:\nStart small by incorporating mindfulness techniques into one meal per day. Focus on savouring each bite, paying attention to flavours, and recognizing hunger cues. Eliminate distractions during meals to enhance mindfulness."
+      },
+      {
+        "id": 8,
+        "question": "Do you regularly read and consider nutritional labels when making food choices?",
+        "noScore": 1,
+        "suggestion": "Label Reading Habit\nMake it a habit to review nutritional labels when shopping for groceries. Educate yourself on key elements, such as serving sizes, macronutrients, and ingredient lists. Gradually, this practice will become routine, helping you make more informed choices."
+      },
+      {
+        "id": 9,
+        "question": "Are you aware of the potential hidden sources of calories in condiments, dressings, and other additives in your meals?",
+        "noScore": 1,
+        "suggestion": "Understanding Hidden Calories:\nEducate yourself on common sources of hidden calories in condiments, dressings, and additives. Read labels to identify high-calorie condiments and explore healthier alternatives. Consider making your own dressings with olive oil, herbs, and vinegar to control ingredients and calories. Be mindful of portion sizes for these additions."
+      },
+      {
+        "id": 10,
+        "question": "Do you prioritise choosing foods with high nutrient density to ensure optimal nutrition while managing calorie intake?",
+        "noScore": 1,
+        "suggestion": "Nutrient-Density Awareness:\nPrioritise whole, nutrient-dense foods such as fruits, vegetables, lean proteins, and whole grains. Familiarise yourself with the concept of the nutrient density of foods. Create balanced meals that include a variety of colours and food groups. Explore recipes that maximise nutrient content without excessive calories."
+      },
+      {
+        "id": 11,
+        "question": "Do you have any medical conditions or health concerns that may be affecting your body weight?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Weight Management Despite Conditions",
+          "details": [
+            "Medical Records Review: Request a copy of your medical records from your healthcare provider. Review the documents to understand your diagnosed medical conditions. Highlight any sections that discuss how these conditions may impact your weight. If there's uncertainty, schedule a follow-up appointment with your healthcare provider to discuss your medical history.",
+            "Collaborative Planning: Work closely with your healthcare provider to develop a tailored weight management plan that considers your medical condition. This plan may include dietary modifications, physical activity recommendations, and regular check-ins."
+          ]
+        }
+      },
+      {
+        "id": 12,
+        "question": "Are you aware of any diagnosed mental health conditions affecting your weight?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Mental Health Impact on Weight",
+          "details": [
+            "Develop alternative coping mechanisms for emotional distress, such as journaling, deep breathing exercises, or engaging in a hobby. Seek support from friends, family, or a therapist to address underlying emotional triggers.",
+            "Changes in Appetite:",
+            "Establish regular, balanced meal times. Focus on nutrient-dense foods to support overall health. Consult a registered dietitian to create a personalised meal plan aligned with your appetite patterns.",
+            "Reduced Motivation for Physical Activity:",
+            "Start with small, achievable goals for physical activity. Choose activities you enjoy to increase motivation. Consider socialising during exercise to enhance enjoyment and accountability. Consult with a fitness professional for tailored guidance."
+          ]
+        }
+      },
+      {
+        "id": 13,
+        "question": "Do you have any physical pain that prevents you from exercising?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Physical Pain Limiting Movement",
+          "details": [
+            "Pain management, physical therapy, and low-impact exercises (including water therapy) can help manage pain and prevent weight gain. Assistive devices may be utilised to improve mobility and support weight maintenance or loss.",
+            "If you are facing limitations in movement due to a condition, work closely with healthcare professionals, including physical therapists and specialists, to develop tailored strategies that address both their specific health condition and weight management. Remember reduced movement means you won't expend as many calories and closer attention needs to be given to choosing nutrient dense calorie controlled foods."
+          ]
+        }
+      },
+      {
+        "id": 14,
+        "question": "Have you noticed weight changes since your medical condition or health condition started?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Weight Change Observation",
+          "details": [
+            "Regular Monitoring: Keep a record of your weight changes over time. Create a simple chart or use a tracking app to document fluctuations. Share this information with your healthcare provider during check-ups for a more comprehensive understanding."
+          ]
+        }
+      },
+      {
+        "id": 15,
+        "question": "Do you take any medications that may have a potential impact on weight management?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Medication Impact Awareness",
+          "details": [
+            "Pharmacist Consultation: Schedule a consultation with your pharmacist to discuss the potential side effects of your medications, including their impact on weight. Pharmacists can provide detailed insights into medication-related concerns."
+          ]
+        }
+      },
+      {
+        "id": 16,
+        "question": "Do you struggle to maintain a healthy weight despite any health conditions?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Weight Management Despite Conditions",
+          "details": [
+            "Collaborative Planning: Work closely with your healthcare provider to develop a tailored weight management plan that considers your medical condition. This plan may include dietary modifications, physical activity recommendations, and regular check-ins."
+          ]
+        }
+      },
+      {
+        "id": 17,
+        "question": "Do you turn to food for comfort during emotional moments?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Emotional Eating",
+          "details": [
+            "Alternative Coping Strategies: Identify alternative ways to cope with emotions without turning to food. This could include journaling, deep breathing exercises, or engaging in a hobby. Consider seeking support from friends, family, or a therapist to discuss emotions and explore healthier coping mechanisms."
+          ]
+        }
+      },
+      {
+        "id": 18,
+        "question": "Do you find yourself eating simply out of boredom?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Boredom Eating",
+          "details": [
+            "Create a Boredom List: Develop a list of alternative activities to combat boredom. This may include going for a walk, reading a book, or trying a new hobby. When boredom strikes, refer to this list to engage in a non-food-related activity."
+          ]
+        }
+      },
+      {
+        "id": 19,
+        "question": "Do you eat when you're feeling lonely or isolated?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Eating When Lonely",
+          "details": [
+            "Connect Socially: Reach out to friends, family, or support groups when feeling lonely. Schedule regular social activities to build connections and combat isolation. Consider joining clubs or classes to meet new people and expand your social circle."
+          ]
+        }
+      },
+      {
+        "id": 20,
+        "question": "Do you tend to indulge in eating during celebratory occasions?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Celebratory Occasion Eating",
+          "details": [
+            "Plan Moderation: Plan ahead for celebratory occasions by setting limits on indulgent foods. Opt for smaller portions or choose healthier alternatives. Focus on the social aspect of the celebration rather than using food as the main source of enjoyment."
+          ]
+        }
+      },
+      {
+        "id": 21,
+        "question": "Are you prone to mindlessly snacking, especially in front of the TV or computer?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Mindless Snacking",
+          "details": [
+            "Mindful Snacking: Create a designated eating area away from distractions. Portion snacks mindfully, and focus on the sensory experience of eating. Consider using smaller bowls or plates to prevent overeating during screen time."
+          ]
+        }
+      },
+      {
+        "id": 22,
+        "question": "Have you ever sought comfort in food to cope with difficult emotions?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Comfort Snacking",
+          "details": [
+            "Alternative Coping Strategies: Identify alternative ways to cope with emotions without turning to food. This could include journaling, deep breathing exercises, or engaging in a hobby. Consider seeking support from friends, family, or a therapist to discuss emotions and explore healthier coping mechanisms."
+          ]
+        }
+      },
+      {
+        "id": 23,
+        "question": "Do you reward yourself with food for accomplishing tasks or goals?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Food Rewards",
+          "details": [
+            "Non-Food Rewards: Establish a list of non-food rewards for achievements. This could include treating yourself to a movie, taking a day off, or enjoying a relaxing activity. Shift the focus from food as a reward to activities that contribute to your overall well-being."
+          ]
+        }
+      },
+      {
+        "id": 24,
+        "question": "Do you engage in eating late at night when emotions are heightened?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Late Night Snacking",
+          "details": [
+            "Nighttime Routine: Develop a calming nighttime routine that doesn't involve eating. This could include reading a book, practicing relaxation techniques, or engaging in a quiet hobby. Create a soothing environment to promote better sleep and emotional well-being."
+          ]
+        }
+      },
+      {
+        "id": 25,
+        "question": "Does socialising often involve overeating or consuming unhealthy foods?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Healthy Social Activities",
+          "details": [
+            "Healthy Social Activities: Plan social activities that revolve around non-food-related experiences, such as outdoor activities, games, or cultural events. Choose restaurants with healthier options or suggest potluck-style gatherings where you can contribute a nutritious dish."
+          ]
+        }
+      },
+      {
+        "id": 26,
+        "question": "Do you use eating as a way to distract yourself from negative emotions?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Mindful Distraction Techniques",
+          "details": [
+            "Create a designated eating area away from distractions. Portion snacks mindfully, and focus on the sensory experience of eating. Consider using smaller bowls or plates to prevent overeating during screen time.",
+            "Mindful Distraction Techniques: Practise mindful distraction techniques, such as deep breathing exercises or engaging in a creative activity. Develop a list of activities that serve as positive distractions from negative emotions. Use these techniques when the urge to eat for distraction arises."
+          ]
+        }
+      },
+      {
+        "id": 27,
+        "question": "Are you prone to eating food without being hungry?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Mindful Eating Practices",
+          "details": [
+            "Incorporate mindful eating into your routine. Focus on the sensory aspects of each bite, chew slowly, and savour the flavours. Eliminate distractions during meals and pay attention to your body's hunger and fullness cues. Consider taking mindful eating courses or using apps to guide your practice."
+          ]
+        }
+      },
+      {
+        "id": 28,
+        "question": "Are you prone to overeating to the point you feel uncomfortably full?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Overeating",
+          "details": [
+            "Pay close attention to the sensations of hunger and fullness during meals. Eat slowly, savor each bite, and pause between bites to assess your level of fullness.",
+            "Establish regular meal times and avoid skipping meals. Having a structured eating routine can help regulate appetite and prevent extreme hunger that may lead to overeating.",
+            "Recognise emotional triggers that may prompt overeating. Find alternative ways to cope with stress, boredom, or other emotions, such as practicing mindfulness, going for a walk, or engaging in a hobby."
+          ]
+        }
+      },
+      {
+        "id": 29,
+        "question": "Are you mindful of maintaining a well-balanced diet with a variety of nutrients?",
+        "noScore": 1,
+        "suggestion": {
+          "title": "Nutrient Tracking",
+          "details": [
+            "Consider using a nutrition tracking app or journal to monitor your daily nutrient intake.",
+            "Aim for a balance of macronutrients (carbohydrates, proteins, and fats) and micronutrients (vitamins and minerals).",
+            "Consult with a registered dietitian or nutrition coach for personalised guidance.",
+            "Eating from the following 5 food groups can help to achieve balanced nutrition:",
+            "1. Vegetables and legumes/beans",
+            "2. Fruits",
+            "3. Whole grains (Cereal) foods",
+            "4. Lean meats and poultry, Fish, Eggs, Tofu, Nuts, and Seeds",
+            "5. Milk, Yogurt, Cheese, and Alternatives"
+          ]
+        }
+      },
+      {
+        "id": 30,
+        "question": "Do you regularly incorporate fruits and vegetables into your daily meals?",
+        "noScore": 1,
+        "suggestion": {
+          "title": "Colourful Plate",
+          "details": [
+            "Make a conscious effort to include a variety of colourful fruits and vegetables in each meal.",
+            "Experiment with different types and preparation methods.",
+            "Create a weekly meal plan that features diverse fruits and vegetables to ensure variety."
+          ]
+        }
+      },
+      {
+        "id": 31,
+        "question": "Do you consume two or more pieces of fruit each day?",
+        "noScore": 1,
+        "suggestion": {
+          "title": "Fruit Accessibility",
+          "details": [
+            "Fruit Accessibility: Keep a variety of fruits readily available and visible at home.",
+            "Consider prepping fruit ahead of time for easy snacking.",
+            "Set a goal to incorporate fruit into different meals, such as adding berries to breakfast or having a piece of fruit as an afternoon snack."
+          ]
+        }
+      },
+      {
+        "id": 32,
+        "question": "Do you ensure a daily intake of 5 or more servings of vegetables, where 1 serving is approximately 75 grams or half a cup?",
+        "noScore": 1,
+        "suggestion": {
+          "title": "Vegetable Prepping",
+          "details": [
+            "Plan and prepare vegetable-centric meals for the week.",
+            "Include a mix of raw and cooked vegetables.",
+            "Experiment with different cooking methods and seasonings to enhance flavor.",
+            "Gradually increase portion sizes to meet the recommended servings."
+          ]
+        }
+      },
+      {
+        "id": 33,
+        "question": "Is fish a common part of your diet, or do you frequently take fish oil supplements?",
+        "noScore": 1,
+        "suggestion": {
+          "title": "Fish Variety",
+          "details": [
+            "Incorporate a variety of fish into your diet, aiming for at least two servings per week.",
+            "Experiment with different cooking methods, such as grilling or baking.",
+            "If fish oil supplements are preferred, consult with your healthcare provider to determine the appropriate dosage."
+          ]
+        }
+      },
+      {
+        "id": 34,
+        "question": "Do you regularly eat canned, frozen, or packaged foods?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Whole Food Focus",
+          "details": [
+            "Prioritize whole, minimally processed foods.",
+            "Plan meals using fresh ingredients and limit the use of canned or packaged items.",
+            "Read labels to choose options with fewer additives and preservatives.",
+            "Batch cooking on weekends can also reduce reliance on convenience foods."
+          ]
+        }
+      },
+      {
+        "id": 35,
+        "question": "Do you frequently consume sweets, desserts, biscuits, cake, ice cream, or chocolate?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Sweet Alternatives",
+          "details": [
+            "Gradually reduce the frequency of sweet treats by exploring healthier alternatives.",
+            "Experiment with fruit-based desserts, yogurt with natural sweeteners, or homemade treats with reduced sugar.",
+            "Allow yourself occasional indulgences, but focus on moderation."
+          ]
+        }
+      },
+      {
+        "id": 36,
+        "question": "Do you regularly take the time to cook your own meals?",
+        "noScore": 1,
+        "suggestion": {
+          "title": "Meal Planning",
+          "details": [
+            "Set aside dedicated time for meal planning and preparation.",
+            "Create a weekly menu, batch-cook if possible, and experiment with simple recipes.",
+            "Cooking at home allows you to control ingredients and make healthier choices.",
+            "Consider involving family members to make it a shared activity."
+          ]
+        }
+      },
+      {
+        "id": 37,
+        "question": "In a typical week, do you rely on takeout or restaurant meals?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Homemade Options",
+          "details": [
+            "Gradually reduce reliance on pre-packaged or restaurant meals.",
+            "Plan and prepare meals at home, emphasizing whole ingredients.",
+            "Experiment with recreating favorite restaurant dishes in a healthier way.",
+            "This allows for better control over portion sizes and ingredients."
+          ]
+        }
+      },
+      {
+        "id": 38,
+        "question": "On average, do you find yourself giving in to your sweet tooth cravings?",
+        "yesScore": 1,
+        "suggestion": {
+          "title": "Sweet Craving Strategies",
+          "details": [
+            "Identify alternative snacks that satisfy sweet cravings in a healthier way, such as fresh fruit, yogurt, or a small serving of dark chocolate.",
+            "Keep these options readily available to make healthier choices when cravings arise.",
+            "Focus on moderation and mindful enjoyment."
+          ]
+        }
+      }
+    ]
+  
+  
