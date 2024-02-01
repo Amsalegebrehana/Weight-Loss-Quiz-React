@@ -3,7 +3,8 @@ import { useNavigate } from 'react-router-dom';
 import arrow from '../assets/icons/arrow.svg'
 import check from '../assets/icons/check.svg';
 import questions from '../data/quiz.json';
-
+import Login from '../component/Login';
+import { sendAnswers } from '../api/sendAnswer';
 
 const Home = (props) =>{
     const navigate = useNavigate();
@@ -11,11 +12,18 @@ const Home = (props) =>{
     const [selected, setSelected] = useState(null);
     const [answersSelected, setAnswersSelected] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [isLoggedIn, setIsLoggedIn] = useState(false); // Add this line
+
 
     const handleSelect = (option) => {
         setSelected(option);
     }
- 
+    
+    const handleLogin = () => {
+        // Perform login logic here
+        setIsLoggedIn(true);
+    }
+
 
     const handleNext = () => {
         currentQuestion < questions.length - 1 && setCurrentQuestion(currentQuestion + 1);
@@ -28,7 +36,9 @@ const Home = (props) =>{
         const currentAnswer = {
             id: questions[currentQuestion].id,
             question: questions[currentQuestion].question,
-            answer: selected
+            answer: selected,
+            correctAnswer: questions[currentQuestion].correctAnswer,
+            suggestion: questions[currentQuestion].suggestion
         }
 
         setAnswersSelected([...answersSelected, currentAnswer]);
@@ -36,7 +46,7 @@ const Home = (props) =>{
         setSelected(null);
 
         if(currentQuestion === questions.length - 1){
-            
+            sendAnswers(answersSelected);
             props.onResponse(answersSelected);
             navigate('/result');
 
@@ -45,7 +55,7 @@ const Home = (props) =>{
 
     return(
         <div className="h-screen bg-gray-200 flex  justify-center items-center">
-    
+             {isLoggedIn ? (
                 <div className="flex flex-col w-4/5 ">
                     <p className=" ml-2 text-lg sm:text-xl md:text-2xl text-2xl "> <span>{questions[currentQuestion].id}. </span> {questions[currentQuestion].question}</p>
                     
@@ -89,6 +99,9 @@ const Home = (props) =>{
                     </div>
 
                 </div>
+             ):(
+                <Login onLogin={handleLogin} />
+             )}
        
     </div>
     )

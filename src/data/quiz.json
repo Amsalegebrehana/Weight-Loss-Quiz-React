@@ -4,66 +4,118 @@
         "id": 1,
         "question": "Do you have an understanding of your daily caloric needs to support your weight goals?",
         "noScore": 1,
-        "suggestion": "Consider consulting with a nutritionist or using online tools to calculate your daily caloric needs based on your goals. Educate yourself on the factors influencing caloric requirements, such as activity level and metabolism."
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": [
+
+            "Consider consulting with a nutritionist or using online tools to calculate your daily caloric needs based on your goals. Educate yourself on the factors influencing caloric requirements, such as activity level and metabolism."
+          ]
+        }
       },
       {
         "id": 2,
         "question": "Are you familiar with the calorie content of the foods you regularly include in your diet?",
         "noScore": 1,
-        "suggestion": "Consider consulting with a nutritionist or using online tools to calculate your daily caloric needs based on your goals. Educate yourself on the factors influencing caloric requirements, such as activity level and metabolism. Start by researching and familiarising yourself with the calorie content of common foods. Utilise mobile apps or online databases that provide nutritional information. Gradually, this awareness will become second nature."
-      },
+        "correctAnswer":"yes",
+        "suggestion":{
+          "title": "",
+          "details": [ "Consider consulting with a nutritionist or using online tools to calculate your daily caloric needs based on your goals. Educate yourself on the factors influencing caloric requirements, such as activity level and metabolism. Start by researching and familiarising yourself with the calorie content of common foods. Utilise mobile apps or online databases that provide nutritional information. Gradually, this awareness will become second nature."
+          ]
+        }
+        },
       {
         "id": 3,
         "question": "Can you identify what constitutes a healthy portion size when preparing or consuming meals?",
         "noScore": 1,
-        "suggestion": "Portion Size Recognition:\nUse visual aids like the palm of your hand or common objects to estimate portion sizes. Practice using measuring cups and scales until you develop a better sense of appropriate servings. Consider taking smaller portions initially and assessing hunger cues before going for seconds."
-      },
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": ["Portion Size Recognition:\nUse visual aids like the palm of your hand or common objects to estimate portion sizes. Practice using measuring cups and scales until you develop a better sense of appropriate servings. Consider taking smaller portions initially and assessing hunger cues before going for seconds."
+          ]
+      }
+        },
       {
         "id": 4,
         "question": "Have you made an effort to log and monitor everything you consume, including food and beverages, throughout a day?",
         "noScore": 1,
-        "suggestion": "Dietary Tracking Attempt\nStart a food journal or use a nutrition tracking app to log your daily intake. Set achievable goals for consistency, such as tracking for a few days a week initially. Reviewing your journal can help identify patterns and areas for improvement."
-      },
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": [ "Dietary Tracking Attempt\nStart a food journal or use a nutrition tracking app to log your daily intake. Set achievable goals for consistency, such as tracking for a few days a week initially. Reviewing your journal can help identify patterns and areas for improvement."
+              ]
+            }
+        },
       {
         "id": 5,
         "question": "Are you conscious of any patterns of unhealthy eating habits that might be affecting your weight?",
         "noScore": 1,
-        "suggestion": "Recognition of Unhealthy Eating Habits\nKeep a reflective journal to document your eating habits and feelings associated with them. Consider seeking support from a nutritionist or counsellor to identify triggers and develop healthier alternatives. Gradual changes, like swapping one unhealthy habit for a healthier choice, can be a good starting point."
-      },
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": ["Recognition of Unhealthy Eating Habits\nKeep a reflective journal to document your eating habits and feelings associated with them. Consider seeking support from a nutritionist or counsellor to identify triggers and develop healthier alternatives. Gradual changes, like swapping one unhealthy habit for a healthier choice, can be a good starting point."
+                  ]
+                }
+        },
       {
         "id": 6,
         "question": "Do you possess the knowledge to accurately determine the calorie content of the foods you typically consume?",
         "noScore": 1,
-        "suggestion": "Caloric Content Comprehension\nEducate yourself on how to read nutritional labels and understand portion sizes. Practice estimating calorie content and gradually build your knowledge. Consider using apps that provide information on the nutritional value of foods."
-      },
+        "correctAnswer":"yes",
+        "suggestion":{
+          "title": "",
+          "details": [ "Caloric Content Comprehension\nEducate yourself on how to read nutritional labels and understand portion sizes. Practice estimating calorie content and gradually build your knowledge. Consider using apps that provide information on the nutritional value of foods."
+              ]
+            }
+        },
       {
         "id": 7,
         "question": "Are you actively engaged in mindful eating, paying attention to the nutritional value and portion sizes of your meals?",
         "noScore": 1,
-        "suggestion": "Mindful Eating Practices:\nStart small by incorporating mindfulness techniques into one meal per day. Focus on savouring each bite, paying attention to flavours, and recognizing hunger cues. Eliminate distractions during meals to enhance mindfulness."
-      },
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": ["Mindful Eating Practices:\nStart small by incorporating mindfulness techniques into one meal per day. Focus on savouring each bite, paying attention to flavours, and recognizing hunger cues. Eliminate distractions during meals to enhance mindfulness."
+              ]
+            }
+        },
       {
         "id": 8,
         "question": "Do you regularly read and consider nutritional labels when making food choices?",
         "noScore": 1,
-        "suggestion": "Label Reading Habit\nMake it a habit to review nutritional labels when shopping for groceries. Educate yourself on key elements, such as serving sizes, macronutrients, and ingredient lists. Gradually, this practice will become routine, helping you make more informed choices."
-      },
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": ["Label Reading Habit\nMake it a habit to review nutritional labels when shopping for groceries. Educate yourself on key elements, such as serving sizes, macronutrients, and ingredient lists. Gradually, this practice will become routine, helping you make more informed choices."
+          ]
+        }
+        },
       {
         "id": 9,
         "question": "Are you aware of the potential hidden sources of calories in condiments, dressings, and other additives in your meals?",
         "noScore": 1,
-        "suggestion": "Understanding Hidden Calories:\nEducate yourself on common sources of hidden calories in condiments, dressings, and additives. Read labels to identify high-calorie condiments and explore healthier alternatives. Consider making your own dressings with olive oil, herbs, and vinegar to control ingredients and calories. Be mindful of portion sizes for these additions."
-      },
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": ["Understanding Hidden Calories:\nEducate yourself on common sources of hidden calories in condiments, dressings, and additives. Read labels to identify high-calorie condiments and explore healthier alternatives. Consider making your own dressings with olive oil, herbs, and vinegar to control ingredients and calories. Be mindful of portion sizes for these additions."
+          ]}
+        },
       {
         "id": 10,
         "question": "Do you prioritise choosing foods with high nutrient density to ensure optimal nutrition while managing calorie intake?",
         "noScore": 1,
-        "suggestion": "Nutrient-Density Awareness:\nPrioritise whole, nutrient-dense foods such as fruits, vegetables, lean proteins, and whole grains. Familiarise yourself with the concept of the nutrient density of foods. Create balanced meals that include a variety of colours and food groups. Explore recipes that maximise nutrient content without excessive calories."
-      },
+        "correctAnswer":"yes",
+        "suggestion": {
+          "title": "",
+          "details": ["Nutrient-Density Awareness:\nPrioritise whole, nutrient-dense foods such as fruits, vegetables, lean proteins, and whole grains. Familiarise yourself with the concept of the nutrient density of foods. Create balanced meals that include a variety of colours and food groups. Explore recipes that maximise nutrient content without excessive calories."
+          ]
+        }
+        },
       {
         "id": 11,
         "question": "Do you have any medical conditions or health concerns that may be affecting your body weight?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Weight Management Despite Conditions",
           "details": [
@@ -76,6 +128,7 @@
         "id": 12,
         "question": "Are you aware of any diagnosed mental health conditions affecting your weight?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Mental Health Impact on Weight",
           "details": [
@@ -91,6 +144,7 @@
         "id": 13,
         "question": "Do you have any physical pain that prevents you from exercising?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Physical Pain Limiting Movement",
           "details": [
@@ -103,6 +157,7 @@
         "id": 14,
         "question": "Have you noticed weight changes since your medical condition or health condition started?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Weight Change Observation",
           "details": [
@@ -114,6 +169,7 @@
         "id": 15,
         "question": "Do you take any medications that may have a potential impact on weight management?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Medication Impact Awareness",
           "details": [
@@ -125,6 +181,7 @@
         "id": 16,
         "question": "Do you struggle to maintain a healthy weight despite any health conditions?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Weight Management Despite Conditions",
           "details": [
@@ -136,6 +193,7 @@
         "id": 17,
         "question": "Do you turn to food for comfort during emotional moments?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Emotional Eating",
           "details": [
@@ -147,6 +205,7 @@
         "id": 18,
         "question": "Do you find yourself eating simply out of boredom?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Boredom Eating",
           "details": [
@@ -158,6 +217,7 @@
         "id": 19,
         "question": "Do you eat when you're feeling lonely or isolated?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Eating When Lonely",
           "details": [
@@ -169,6 +229,7 @@
         "id": 20,
         "question": "Do you tend to indulge in eating during celebratory occasions?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Celebratory Occasion Eating",
           "details": [
@@ -180,6 +241,7 @@
         "id": 21,
         "question": "Are you prone to mindlessly snacking, especially in front of the TV or computer?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Mindless Snacking",
           "details": [
@@ -191,6 +253,7 @@
         "id": 22,
         "question": "Have you ever sought comfort in food to cope with difficult emotions?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Comfort Snacking",
           "details": [
@@ -202,6 +265,7 @@
         "id": 23,
         "question": "Do you reward yourself with food for accomplishing tasks or goals?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Food Rewards",
           "details": [
@@ -213,6 +277,7 @@
         "id": 24,
         "question": "Do you engage in eating late at night when emotions are heightened?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Late Night Snacking",
           "details": [
@@ -224,6 +289,7 @@
         "id": 25,
         "question": "Does socialising often involve overeating or consuming unhealthy foods?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Healthy Social Activities",
           "details": [
@@ -235,6 +301,7 @@
         "id": 26,
         "question": "Do you use eating as a way to distract yourself from negative emotions?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Mindful Distraction Techniques",
           "details": [
@@ -247,6 +314,7 @@
         "id": 27,
         "question": "Are you prone to eating food without being hungry?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Mindful Eating Practices",
           "details": [
@@ -258,6 +326,7 @@
         "id": 28,
         "question": "Are you prone to overeating to the point you feel uncomfortably full?",
         "yesScore": 1,
+        "correctAnswer":"no",
         "suggestion": {
           "title": "Overeating",
           "details": [
@@ -271,6 +340,7 @@
         "id": 29,
         "question": "Are you mindful of maintaining a well-balanced diet with a variety of nutrients?",
         "noScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Nutrient Tracking",
           "details": [
@@ -290,6 +360,7 @@
         "id": 30,
         "question": "Do you regularly incorporate fruits and vegetables into your daily meals?",
         "noScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Colourful Plate",
           "details": [
@@ -303,6 +374,7 @@
         "id": 31,
         "question": "Do you consume two or more pieces of fruit each day?",
         "noScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Fruit Accessibility",
           "details": [
@@ -316,6 +388,7 @@
         "id": 32,
         "question": "Do you ensure a daily intake of 5 or more servings of vegetables, where 1 serving is approximately 75 grams or half a cup?",
         "noScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Vegetable Prepping",
           "details": [
@@ -330,6 +403,7 @@
         "id": 33,
         "question": "Is fish a common part of your diet, or do you frequently take fish oil supplements?",
         "noScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Fish Variety",
           "details": [
@@ -343,6 +417,7 @@
         "id": 34,
         "question": "Do you regularly eat canned, frozen, or packaged foods?",
         "yesScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Whole Food Focus",
           "details": [
@@ -357,6 +432,7 @@
         "id": 35,
         "question": "Do you frequently consume sweets, desserts, biscuits, cake, ice cream, or chocolate?",
         "yesScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Sweet Alternatives",
           "details": [
@@ -370,6 +446,7 @@
         "id": 36,
         "question": "Do you regularly take the time to cook your own meals?",
         "noScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Meal Planning",
           "details": [
@@ -384,6 +461,7 @@
         "id": 37,
         "question": "In a typical week, do you rely on takeout or restaurant meals?",
         "yesScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Homemade Options",
           "details": [
@@ -398,6 +476,7 @@
         "id": 38,
         "question": "On average, do you find yourself giving in to your sweet tooth cravings?",
         "yesScore": 1,
+        "correctAnswer":"yes",
         "suggestion": {
           "title": "Sweet Craving Strategies",
           "details": [
