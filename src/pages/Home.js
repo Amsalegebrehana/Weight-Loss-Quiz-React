@@ -17,11 +17,6 @@ const Home = (props) =>{
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [isLoggedIn, setIsLoggedIn] = useState(false); 
     const [isLoading, setIsLoading] = useState(false);
-
-
-    const handleSelect = (option) => {
-        setSelected(option);
-    }
     
     const handleLogin = () => {
         // Perform login logic here
@@ -79,7 +74,7 @@ const Home = (props) =>{
             console.log(answerjson);
 
             setIsLoading(true);
-            const response = await sendAnswers(answerjson);
+            const response = await sendAnswers(finalData);
             
             setIsLoading(false);
             console.log("response>>>>>>", response);

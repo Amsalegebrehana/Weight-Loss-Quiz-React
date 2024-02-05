@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import {downloadPdf} from '../api/downloadpdf';
+import { useEffect } from 'react';
+
 
 const stats = [
     { id: 1, name: 'Lack of education/awareness', value: '80%' },
@@ -10,16 +12,20 @@ const stats = [
 
 
 const Result = ({response, name, email}) => {
-    console.log("Result page response",response);
-    console.log("results response",response.email);
-    
+
+
+    const [lackEducationScore, setLackEducationScore] = useState(50);
+    const [medicalConditionsScore, setMedicalConditionsScore] = useState(40);
+    const [emotionalEatingScore, setEmotionalEatingScore] = useState(40);
+    const [nutritionScore, setNutritionScore] = useState(12);
+
     const [isLoading, setIsLoading] = useState(false);
     
     const handleDownload = async () => {
         try {
             setIsLoading(true)
             const response = await downloadPdf(response.email);
-            console.log('Response:', response);
+          
             setIsLoading(false)
 
         } catch (error) {
@@ -27,9 +33,43 @@ const Result = ({response, name, email}) => {
         }
     }
 
+    useEffect(() => {
+
+        const calculateScore = () => {
+            
+            let lackEducationScore = 0;
+            let medicalConditionsScore = 0;
+            let emotionalEatingScore = 0;
+            let nutritionScore = 0;
+    
+            Object.keys(response).forEach((questionId) => {
+                if(response[questionId] === 'yes' && parseInt(questionId) <= 10){
+                    lackEducationScore += 1;
+                }
+                else if(response[questionId] === 'yes' && parseInt(questionId) > 10 && parseInt(questionId) <= 16){
+                    medicalConditionsScore += 1;
+                }
+                else if(response[questionId] === 'yes' && parseInt(questionId) > 16 && parseInt(questionId) <= 28){
+                    emotionalEatingScore += 1;
+                }
+                else if(response[questionId] === 'yes' && parseInt(questionId) > 28 && parseInt(questionId) <= 40){
+                    nutritionScore += 1;
+                }
+            });
+    
+            setMedicalConditionsScore(medicalConditionsScore);
+            setLackEducationScore(lackEducationScore);
+            setEmotionalEatingScore(emotionalEatingScore);
+            setNutritionScore(nutritionScore);
+
+        };
+        
+        calculateScore();
+    }, [response]);
+
     return (
         <div>
-            {response}
+            
             <div className="flex items-center mx-48 justify-end mt-5 gap-x-6 bg-green-700 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
                 <p className="text-sm leading-6 text-white">
                     <a href="#">
@@ -58,16 +98,27 @@ const Result = ({response, name, email}) => {
                                 Results
                         </h2>
                         <p className="mt-4 text-lg leading-8 text-gray-600">
-                        Lorem ipsum dolor sit amet consect adipisicing possimus.
+                        Weight Lose Result of Name: {name} Email: {email}
                         </p>
                     </div>
                     <dl className="mt-16 grid grid-cols-1 gap-0.5 overflow-hidden rounded-2xl text-center sm:grid-cols-2 lg:grid-cols-4">
-                        {stats.map((stat) => (
-                        <div key={stat.id} className="flex flex-col bg-gray-400/5 p-8">
-                            <dt className="text-sm font-semibold leading-6 text-gray-600">{stat.name}</dt>
-                            <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{stat.value}</dd>
+                       
+                        <div  className="flex flex-col bg-gray-400/5 p-8">
+                            <dt className="text-sm font-semibold leading-6 text-gray-600">Lack of education/awareness </dt>
+                            <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{lackEducationScore} %</dd>
                         </div>
-                        ))}
+                        <div  className="flex flex-col bg-gray-400/5 p-8">
+                            <dt className="text-sm font-semibold leading-6 text-gray-600">Medical or Health Condition </dt>
+                            <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{medicalConditionsScore} %</dd>
+                        </div>
+                        <div  className="flex flex-col bg-gray-400/5 p-8">
+                            <dt className="text-sm font-semibold leading-6 text-gray-600">Emotional eating </dt>
+                            <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{emotionalEatingScore} %</dd>
+                        </div>
+                        <div  className="flex flex-col bg-gray-400/5 p-8">
+                            <dt className="text-sm font-semibold leading-6 text-gray-600">Inadequate nutrition</dt>
+                            <dd className="order-first text-3xl font-semibold tracking-tight text-gray-900">{nutritionScore} %</dd>
+                        </div>
                     </dl>
 
                     <button
