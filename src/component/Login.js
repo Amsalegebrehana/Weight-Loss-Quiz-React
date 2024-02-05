@@ -56,6 +56,7 @@ const Login = ({ onLogin, onEmailChange, onNameChange  }) => {
                 >
                     Submit
                 </button>
+                
             </div>
         </div>
     )

@@ -43,9 +43,7 @@ const Home = (props) =>{
         }
 
         const question_num = questions[currentQuestion].id.toString();
-        console.log('question_num', question_num);
-        
-        console.log("selected: ", selected)
+   
         setAnswersSelected({
             ...answersSelected,
             [question_num]: selected,
@@ -54,15 +52,13 @@ const Home = (props) =>{
 
         setSelected(null);
 
-        if(currentQuestion === 3 ){
-            console.log("insde if", question_num, selected)
+        if(currentQuestion === questions.length - 1){
 
             setAnswersSelected({
                 ...answersSelected,
                 [question_num]: 'no',
             });
 
-            console.log("answersSelected", answersSelected);
             
             const finalData = {
                 response: answersSelected,
@@ -71,13 +67,11 @@ const Home = (props) =>{
             };
 
             const answerjson = JSON.stringify(finalData);
-            console.log(answerjson);
 
             setIsLoading(true);
             const response = await sendAnswers(finalData);
             
             setIsLoading(false);
-            console.log("response>>>>>>", response);
 
             props.onResponse(answerjson);
             navigate('/result');

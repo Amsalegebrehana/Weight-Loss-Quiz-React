@@ -3,14 +3,6 @@ import {downloadPdf} from '../api/downloadpdf';
 import { useEffect } from 'react';
 
 
-const stats = [
-    { id: 1, name: 'Lack of education/awareness', value: '80%' },
-    { id: 2, name: 'Medical or Health Condition', value: '30%' },
-    { id: 3, name: 'Emotional eating', value: '90%' },
-    { id: 4, name: 'Inadequate nutrition', value: '40%' },
-  ]
-
-
 const Result = ({response, name, email}) => {
 
 
@@ -142,7 +134,6 @@ const Result = ({response, name, email}) => {
 
             </div>
 
-            
         </div>
     )
 }
