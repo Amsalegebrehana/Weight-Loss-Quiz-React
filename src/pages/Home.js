@@ -9,10 +9,14 @@ import { sendAnswers } from '../api/sendAnswer';
 const Home = (props) =>{
     const navigate = useNavigate();
 
+    const [email, setEmail] = useState('');
+    const [name, setName] = useState('');
+
     const [selected, setSelected] = useState(null);
     const [answersSelected, setAnswersSelected] = useState([]);
     const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [isLoggedIn, setIsLoggedIn] = useState(false); // Add this line
+    const [isLoggedIn, setIsLoggedIn] = useState(false); 
+    const [isLoading, setIsLoading] = useState(false);
 
 
     const handleSelect = (option) => {
@@ -25,46 +29,81 @@ const Home = (props) =>{
     }
 
 
-    const handleNext = () => {
-        currentQuestion < questions.length - 1 && setCurrentQuestion(currentQuestion + 1);
+    const handleEmailChange = (newEmail) => {
+        setEmail(newEmail);
+    };
+
+    const handleNameChange = (newName) => {
+        setName(newName);
+    };
+
+    const handleNext = async () => {
+
+        console.log(questions.length)
+       
         if(selected === null){
             console.log('Please select an option');
         }else{
-            console.log('Next');
+            console.log('Next', currentQuestion);
         }
 
-        const currentAnswer = {
-            id: questions[currentQuestion].id,
-            question: questions[currentQuestion].question,
-            answer: selected,
-            correctAnswer: questions[currentQuestion].correctAnswer,
-            suggestion: questions[currentQuestion].suggestion
-        }
-
-        setAnswersSelected([...answersSelected, currentAnswer]);
+        const question_num = questions[currentQuestion].id.toString();
+        console.log('question_num', question_num);
+        
+        console.log("selected: ", selected)
+        setAnswersSelected({
+            ...answersSelected,
+            [question_num]: selected,
+        });
+    
 
         setSelected(null);
 
-        if(currentQuestion === questions.length - 1){
-            sendAnswers(answersSelected);
-            props.onResponse(answersSelected);
+        if(currentQuestion === 3 ){
+            console.log("insde if", question_num, selected)
+
+            setAnswersSelected({
+                ...answersSelected,
+                [question_num]: 'no',
+            });
+
+            console.log("answersSelected", answersSelected);
+            
+            const finalData = {
+                response: answersSelected,
+                email: email,
+                name: name
+            };
+
+            const answerjson = JSON.stringify(finalData);
+            console.log(answerjson);
+
+            setIsLoading(true);
+            const response = await sendAnswers(answerjson);
+            
+            setIsLoading(false);
+            console.log("response>>>>>>", response);
+
+            props.onResponse(answerjson);
             navigate('/result');
 
         }
+
+        currentQuestion < questions.length -1  && setCurrentQuestion(currentQuestion + 1);
     }
 
     return(
         <div className="h-screen bg-gray-200 flex  justify-center items-center">
              {isLoggedIn ? (
                 <div className="flex flex-col w-4/5 ">
-                    <p className=" ml-2 text-lg sm:text-xl md:text-2xl text-2xl "> <span>{questions[currentQuestion].id}. </span> {questions[currentQuestion].question}</p>
+                    <p className=" ml-2 text-lg sm:text-xl md:text-2xl lg:text-2xl "> <span>{questions[currentQuestion].id}. </span> {questions[currentQuestion].question}</p>
                     
                     <div className="mt-7 ml-5">
                         <button
                             type="button"
                             className={`rounded  pl-4 w-48 h-10 text-left py-1 text-lg font-medium border border-blue-900 text-blue-900 ring-1 ring-inset ring-gray-300 hover:text-white hover:bg-blue-900 ${selected === 'yes' ? 'bg-blue-900 text-white' : ' bg-blue-100'}`}
                             
-                            onClick={() => handleSelect('yes')}
+                            onClick={() => setSelected('yes')}
                         >
                             <span className="inline-flex items-center rounded-sm bg-blue-50 px-2 py-1 text-sm mr-3 font-bold text-blue-900 ring-2 ring-inset ring-blue-900">
                                 Y
@@ -78,7 +117,7 @@ const Home = (props) =>{
                             type="button"
                             className={`rounded  pl-4 w-48 h-10 text-left py-1 text-lg font-medium border border-blue-900 text-blue-900 ring-1 ring-inset ring-gray-300 hover:text-white hover:bg-blue-900 ${selected === 'no' ? 'bg-blue-900 text-white' : ' bg-blue-100'}`}
                             // classsName="rounded bg-white pl-4 w-48 h-10 text-left py-1 text-lg font-medium border border-blue-900 text-blue-900 bg-blue-100 ring-1 ring-inset ring-gray-300 hover:text-white hover:bg-blue-900"
-                            onClick={() => handleSelect('no')}
+                            onClick={() => setSelected('no')}
                         >
                             <span className="inline-flex items-center rounded-sm bg-blue-50 px-2 py-1 text-sm mr-3 font-bold text-blue-900 ring-2 ring-inset ring-blue-900">
                                 N
@@ -90,17 +129,25 @@ const Home = (props) =>{
                     <div className="mt-4 ml-5">
                         <button
                             type="button"
-                            className="rounded-lg bg-blue-900 pl-4 w-28 flex items-center text-center  h-10 text-left py-1 text-lg font-bold border border-blue-900 text-white  ring-1 ring-inset ring-gray-300 "
+                            className="rounded-lg bg-blue-900 pl-4 w-28 flex items-center  h-10 text-left py-1 text-lg font-bold border border-blue-900 text-white  ring-1 ring-inset ring-gray-300 "
                             onClick={() => handleNext()}
                             disabled={selected === null}
                         >
-                            NEXT <img src={arrow} alt='arrow' className='w-6 h-6 ml-2' />
+                            {isLoading ? (
+                                    null
+                                ): (
+                                    <>
+
+                                    NEXT <img src={arrow} alt='arrow' className='w-6 h-6 ml-2' />
+                                    </>
+
+                            )}
                         </button>
                     </div>
 
                 </div>
              ):(
-                <Login onLogin={handleLogin} />
+                <Login onLogin={handleLogin} onEmailChange={handleEmailChange} onNameChange={handleNameChange} />
              )}
        
     </div>

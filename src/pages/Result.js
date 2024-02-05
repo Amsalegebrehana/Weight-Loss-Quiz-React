@@ -1,3 +1,5 @@
+import React, { useState } from 'react'
+import {downloadPdf} from '../api/downloadpdf';
 
 const stats = [
     { id: 1, name: 'Lack of education/awareness', value: '80%' },
@@ -7,12 +9,27 @@ const stats = [
   ]
 
 
-const Result = ({response}) => {
+const Result = ({response, name, email}) => {
+    console.log("Result page response",response);
+    console.log("results response",response.email);
+    
+    const [isLoading, setIsLoading] = useState(false);
+    
+    const handleDownload = async () => {
+        try {
+            setIsLoading(true)
+            const response = await downloadPdf(response.email);
+            console.log('Response:', response);
+            setIsLoading(false)
 
-    console.log("results response",response);
+        } catch (error) {
+            console.error('Error downloading pdf:', error);
+        }
+    }
 
     return (
         <div>
+            {response}
             <div className="flex items-center mx-48 justify-end mt-5 gap-x-6 bg-green-700 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
                 <p className="text-sm leading-6 text-white">
                     <a href="#">
@@ -56,11 +73,18 @@ const Result = ({response}) => {
                     <button
                         type="button"
                         className="flex rounded-md bg-blue-900 px-4 mt-14 justify-center py-2 text-lg font-semibold text-white shadow-sm "
+                        onClick={handleDownload}
                         >
-                         <span className="mr-2">Download pdf</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
-                        </svg>
+                            <span className="mr-2">Download pdf</span>
+                            {isLoading ? (
+                                <p>...</p>
+                            ): (
+                                
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="white" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+                            </svg>
+                            )}
+                         
 
                     </button>
                 </div>

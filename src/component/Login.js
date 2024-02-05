@@ -1,6 +1,7 @@
 
 
-const Login = ({ onLogin }) => {
+const Login = ({ onLogin, onEmailChange, onNameChange  }) => {
+
     return (
         <div className="flex justify-center items-center h-screen shadow-xl my-24 p-24">
             <div>
@@ -19,6 +20,7 @@ const Login = ({ onLogin }) => {
                         id="name"
                         className="peer block w-full h-14 pl-4 border-0 bg-blue-50 py-1.5 text-gray-900  sm:text-sm sm:leading-6"
                         placeholder="Full name"
+                        onChange={(e) => onNameChange(e.target.value)}
                         />
                         <div
                         className="absolute inset-x-0 bottom-0 border-t border-gray-300 peer-focus:border-t-2 peer-focus:border-indigo-600"
@@ -38,6 +40,7 @@ const Login = ({ onLogin }) => {
                         id="email"
                         className="peer block w-full h-14 pl-4 border-0 bg-blue-50 py-1.5 text-gray-900  sm:text-sm sm:leading-6"
                         placeholder="Email"
+                        onChange={(e) => onEmailChange(e.target.value)} 
                         />
                         <div
                         className="absolute inset-x-0 bottom-0 border-t border-gray-300 peer-focus:border-t-2 peer-focus:border-indigo-600"
