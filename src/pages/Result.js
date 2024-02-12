@@ -13,10 +13,11 @@ const Result = ({response, name, email}) => {
 
     const [isLoading, setIsLoading] = useState(false);
     
+
     const handleDownload = async () => {
         try {
             setIsLoading(true)
-            const response = await downloadPdf(response.email);
+            const responseData = await downloadPdf(email);
           
             setIsLoading(false)
 
@@ -33,26 +34,28 @@ const Result = ({response, name, email}) => {
             let medicalConditionsScore = 0;
             let emotionalEatingScore = 0;
             let nutritionScore = 0;
-    
-            Object.keys(response).forEach((questionId) => {
-                if(response[questionId] === 'yes' && parseInt(questionId) <= 10){
+
+
+            const resData = response.response
+            Object.keys(resData).forEach((questionId) => {
+                if(resData[questionId] === 'yes' && parseInt(questionId) <= 10){
                     lackEducationScore += 1;
                 }
-                else if(response[questionId] === 'yes' && parseInt(questionId) > 10 && parseInt(questionId) <= 16){
+                else if(resData[questionId] === 'no' && parseInt(questionId) > 10 && parseInt(questionId) <= 16){
                     medicalConditionsScore += 1;
                 }
-                else if(response[questionId] === 'yes' && parseInt(questionId) > 16 && parseInt(questionId) <= 28){
+                else if(resData[questionId] === 'no' && parseInt(questionId) > 16 && parseInt(questionId) <= 28){
                     emotionalEatingScore += 1;
                 }
-                else if(response[questionId] === 'yes' && parseInt(questionId) > 28 && parseInt(questionId) <= 40){
+                else if(resData[questionId] === 'yes' && parseInt(questionId) > 28 && parseInt(questionId) <= 40){
                     nutritionScore += 1;
                 }
             });
     
-            setMedicalConditionsScore(medicalConditionsScore);
-            setLackEducationScore(lackEducationScore);
-            setEmotionalEatingScore(emotionalEatingScore);
-            setNutritionScore(nutritionScore);
+            setMedicalConditionsScore((medicalConditionsScore /6) * 100 );
+            setLackEducationScore((lackEducationScore / 10) * 100 );
+            setEmotionalEatingScore((emotionalEatingScore / 12) * 100);
+            setNutritionScore((nutritionScore /10) * 100);
 
         };
         
@@ -118,7 +121,7 @@ const Result = ({response, name, email}) => {
                         className="flex rounded-md bg-blue-900 px-4 mt-14 justify-center py-2 text-lg font-semibold text-white shadow-sm "
                         onClick={handleDownload}
                         >
-                            <span className="mr-2">Download pdf</span>
+                            <span className="mr-2">E-mail pdf Result</span>
                             {isLoading ? (
                                 <p>...</p>
                             ): (

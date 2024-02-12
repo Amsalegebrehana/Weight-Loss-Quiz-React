@@ -34,14 +34,6 @@ const Home = (props) =>{
 
     const handleNext = async () => {
 
-        console.log(questions.length)
-       
-        if(selected === null){
-            console.log('Please select an option');
-        }else{
-            console.log('Next', currentQuestion);
-        }
-
         const question_num = questions[currentQuestion].id.toString();
    
         setAnswersSelected({
@@ -52,7 +44,7 @@ const Home = (props) =>{
 
         setSelected(null);
 
-        if(currentQuestion === questions.length - 1){
+        if(currentQuestion === questions.length -1 ){
 
             setAnswersSelected({
                 ...answersSelected,
@@ -73,7 +65,7 @@ const Home = (props) =>{
             
             setIsLoading(false);
 
-            props.onResponse(answerjson);
+            props.onResponse(finalData);
             navigate('/result');
 
         }
