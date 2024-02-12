@@ -52,10 +52,10 @@ const Result = ({response, name, email}) => {
                 }
             });
     
-            setMedicalConditionsScore((medicalConditionsScore /6) * 100 );
-            setLackEducationScore((lackEducationScore / 10) * 100 );
-            setEmotionalEatingScore((emotionalEatingScore / 12) * 100);
-            setNutritionScore((nutritionScore /10) * 100);
+            setMedicalConditionsScore(((medicalConditionsScore /6) * 100).toFixed(2) );
+            setLackEducationScore(((lackEducationScore / 10) * 100).toFixed(2) );
+            setEmotionalEatingScore(((emotionalEatingScore / 12) * 100).toFixed(2));
+            setNutritionScore(((nutritionScore /10) * 100).toFixed(2));
 
         };
         
